@@ -1,0 +1,11 @@
+torch>=2.1.0
+transformers>=4.38.0
+datasets>=2.17.0
+accelerate>=0.27.0
+peft>=0.9.0
+bitsandbytes>=0.42.0
+sentencepiece>=0.1.99
+protobuf
+pandas
+scipy
+pyarrow

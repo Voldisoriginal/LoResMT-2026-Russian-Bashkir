@@ -8,7 +8,7 @@ This repository contains the implementation of the **DevLake** system for the **
 
 Our best system achieved a **CHRF++ score of 52.67**, securing a top position on the leaderboard.
 
-## 📄 Abstract
+## Abstract
 
 Bashkir is a low-resource Turkic language with rich morphology. We conducted a comparative study of three architectures:
 1.  **NLLB-200 (1.3B):** Fine-tuned via QLoRA.
@@ -17,7 +17,7 @@ Bashkir is a low-resource Turkic language with rich morphology. We conducted a c
 
 We demonstrate that combining semantic data filtering (using BERT) with parameter-efficient fine-tuning of large models significantly outperforms traditional compact baselines.
 
-## 🏆 Results
+## Results
 
 | System | Architecture | Params | Method | CHRF++ | Hugging Face Model |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -25,7 +25,7 @@ We demonstrate that combining semantic data filtering (using BERT) with paramete
 | DevLake-Medium | M2M-100 | 418M | LoRA | 48.80 | [Link](https://huggingface.co/Voldis/m2m100-rus-bak) |
 | DevLake-Small | MarianMT | 77M | Full FT | 43.15 | [Link](https://huggingface.co/Voldis/marian-rus-bak) |
 
-## 🛠️ Installation
+## Installation
 
 1. Install PyTorch with CUDA support (follow instructions at [pytorch.org](https://pytorch.org/get-started/locally/)).
 2. Install the remaining dependencies:
@@ -34,7 +34,7 @@ We demonstrate that combining semantic data filtering (using BERT) with paramete
 pip install -r requirements.txt
 ```
 
-## 🚀 Reproduction
+## Reproduction
 
 ### 1. Data Filtering
 We filter the dataset using a domain-specific BERT model to remove noise and misalignment.
@@ -60,14 +60,20 @@ python scripts/train_m2m_418m.py
 python scripts/train_marian_77m.py
 ```
 
-## 📚 Citation
+## Citation
 
 If you use this code or models, please cite our paper:
 
 ```bibtex
-@article{devlake2026loresmt,
-  title={DevLake at LoResMT 2026: The Impact of Pre-training and Model Scale on Russian-Bashkir Low-Resource Translation},
-  author={DevLake Team},
-  journal={Proceedings of LoResMT 2026},
-  year={2026}
+@inproceedings{tyurin-2026-devlake,
+    title = "{D}ev{L}ake at {L}o{R}es{MT} 2026: The Impact of Pre-training and Model Scale on {R}ussian-{B}ashkir Low-Resource Translation",
+    author = "Tyurin, Vyacheslav",
+    booktitle = "Proceedings for the Ninth Workshop on Technologies for Machine Translation of Low Resource Languages (LoResMT 2026)",
+    month = mar,
+    year = "2026",
+    address = "Rabat, Morocco",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.loresmt-1.18",
+    doi = "10.18653/v1/2026.loresmt-1.18",
+    pages = "209--212",
 }
